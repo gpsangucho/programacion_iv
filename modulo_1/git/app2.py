@@ -1,0 +1,5 @@
+print('Bienvenidos al 4 semestre')
+print('bienvenido')
+print('bienvenido')
+print('bienvenido')
+print('bienvenido')
