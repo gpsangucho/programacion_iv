@@ -19,6 +19,9 @@ fun main(){
         println("Padawan")
     }
 
+    modelo: String = "R2-D2"
+    when(modelo: String){
 
+    }
 
 }
