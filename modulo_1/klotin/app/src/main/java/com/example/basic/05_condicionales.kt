@@ -19,9 +19,29 @@ fun main(){
         println("Padawan")
     }
 
-    modelo: String = "R2-D2"
-    when(modelo: String){
-
+    var tipoDroide: String = "R2-D2"
+    when(tipoDroide){
+        "R2-D2", "R2-Q5"->println("Droide astromecánico")
+        "C-3PO", "C-3PA"->println("Droide de protocolo")
+        "BB-8", "BB-9E"->println("Droide de nueva generación")
     }
 
+    var peligro: Int = 5
+    var recompensa: Int = 5
+    when{
+        peligro > 8 && recompensa < 1000->println("Misión Rechazada")
+        peligro <= 3->println("Misión Aceptada")
+        else->println("Requiere Evaluación Adicional")
+    }
+
+    val mes: String = "junio"
+    when(mes){
+        "enero","febrero","marzo" -> println("Fuego")
+        "Abril","mayo","junio" -> println("Tierra")
+        "julio","agosto","Septiembre" -> println("Aire")
+        "oct","nov","dic" -> println("Agua")
+    }
+
+
 }
+
