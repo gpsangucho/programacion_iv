@@ -2,83 +2,80 @@ package com.example.basic
 
 fun main(){
     println("VARIABLES")
-    val planeta = "Tatooine"
-    var jedi = "Anakin"
+    val nombre_mascota = "Lupe"
+    var tipo_mascota = "perro"
 
-    jedi = "Obiwan"
+    //nombre_mascota = "Obiwan"
 
-    println("Tipos de variables")
+    println("CONSULTAS VETERINARIAS: TIPOS DE VARIABLES")
     println("Tipos numéricos")
 
     println("Tipos Entero")
-    val edad: Int = 25
-    println(edad)
+    val edad_mascota1: Int = 4
+    println("Edad de la mascota: $edad_mascota1")
 
     println("Tipo Double")
-    val altura: Double = 25.5
-    println(altura)
+    val valor_total: Double = 25.5
+    println("Valor total: $valor_total")
 
     println("Tipo Float")
     val peso: Float = 25.5f
     println(peso)
 
     println("Tipo Long (entero muy largo)")
-    val poblacion: Long = 2_000_000_000L
-    println(poblacion)
+    val consultas: Long = 2_000_000_000L
+    println("consultas del mes: $consultas")
 
     println("Tipo Texto (cadena de caracteres)")
-    val nombre: String = "Obi-WAn Kenobi"
-    println(nombre)
+    val nombre_cliente1: String = "Obrazil"
+    println("Cliente: $nombre_cliente1")
 
     println("Tipo Char (almacena 1 solo dígito)")
-    val inicial: Char = 'O'
-    println(inicial)
+    val sexo_mascota: Char = 'M'
+    println(sexo_mascota)
 
     println("Tipo lógico")
-    val esJedi: Boolean = true
-    println(esJedi)
+    val estado_atencion: Boolean = true
+    println("Estado de la atención médica: $estado_atencion")
 
-    println("Nulidad")
+    println("------- Nulidad -------")
     println("No acepta nulos. Debe declararse para que lo acepte. use ?")
-    val apellido: String = "Lopez"
-    println(apellido)
-    val apellido1: String? = null
-    println(apellido1)
-    val ciudad: String? = ""
-    println(ciudad?.length)
+    val apellido_cliente: String = "Lopez"
+    println(apellido_cliente)
+    val apellido_cliente1: String? = null
+    println(apellido_cliente1)
+    val direccion: String? = ""
+    println(direccion?.length)
 
     println("Operacion de aserciòn no null. es una manera de buscar excepciones (Si no tiene nada devuelve una excepciòn)")
-    val longitudSegura =  apellido!!.length
+    val longitudSegura =  apellido_cliente!!.length
 
     println("\n Interpolacion de strings")
     println("sirve para concatenar cadenas y las que no son cadena de caracteres")
-    val nombre1: String = "Leia"
-    val edad1: Int = 15
-    val planeta1: String = "Alderan"
-    println("${nombre1.uppercase()} nacio en ${planeta1}")
-    println("En 10 años tendrá: ${edad1+10} anios")
+    val nombre_cliente: String = "Leiva"
+    val edad_mascota: Int = 5
+    val direccion_cliente: String = "Conocoto"
+    println("${nombre_cliente.uppercase()} vive en ${direccion_cliente}")
+    println("Tiene una mascota de ${edad_mascota} anios")
 
     println("Variable String Multilinea")
     val message = """
-        Querido $nombre
-        Tu mision en $planeta
-        ha sido completada exitosamente
-        Que la fuerza te acompañe
+        La cliente $nombre_cliente
+        tiene una mascota de $edad_mascota anios
+        que se encuentra en perfecto estado de salud
         """
     println(message)
 
     println("\n CONVERSIONES")
-    val textoEdad: String = "25"
-    val edad2: Int = textoEdad.toInt()
+    val edad_cliente: String = "25"
+    val edad2: Int = edad_cliente.toInt()
     println(edad2)
-    println("Edad en texto: ${textoEdad} a edad en entero ${edad2}")
+    println("Edad en texto: ${edad_cliente} a edad en entero ${edad2}")
 
-    val numeroDouble: Double = 50.8
-    val numeroConvertido: String = numeroDouble.toString()
-    println(numeroConvertido)
-    println("Double: ${numeroDouble} a string: ${numeroConvertido}")
-
-
+    val costo_consulta: Double = 50.8
+    val costo_string: String = costo_consulta.toString()
+    println(costo_string)
+    println("Costo en Double: ${costo_consulta} a costo en string: ${costo_string}")
 
 
 }
