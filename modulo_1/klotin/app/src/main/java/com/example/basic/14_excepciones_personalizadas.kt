@@ -8,20 +8,18 @@ fun realizarMision(nivelFuerza: Int, peligroMision:Int): String{
         when {
             nivelFuerza < 30 -> throw FuerzaInsuficienteException("Nivel de fuerza muy bajo: ${nivelFuerza}")
             nivelFuerza < 80 -> throw MisionPeligrosaException("Mison extremadamente peligrosa")
-            else -> {
-                "Error inesperado"
-            }
-        } catch (e:FuerzaInsuficienteException){
-            "error: ${e.message}. Se requiere entrenamiento adicional"
-        } catch (e.MisionPeligrosaException){
-            "error: ${e.message}. Nivel de peligro ${peligroMision}"
-        } catch (e:Exception){
-            "${e.message}"
-        } finally {
-            "reporte enviado"
+            else -> {"Error inesperado" }
         }
-
+    }catch (e:FuerzaInsuficienteException){
+        "error: ${e.message}. Se requiere entrenamiento adicional"
+    } catch (e: MisionPeligrosaException){
+        "error: ${e.message}. Nivel de peligro ${peligroMision}"
+    } catch (e:Exception){
+        "${e.message}"
+    } finally {
+        "reporte enviado"
     }
+
 }
 
 fun main(){

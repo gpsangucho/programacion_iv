@@ -6,7 +6,7 @@ package com.example.basic
 enum class TipoSable(val color:String, val poder: Int){
 
     AZUL(color= "azul", poder= 85){
-        override fun description()="Sable tradicional de los Jedi"
+        override fun descripcion()="Sable tradicional de los Jedi"
     },
     VERDE(color ="verde", poder=90){
         override fun descripcion()="Sable de los Jedi consultares"
