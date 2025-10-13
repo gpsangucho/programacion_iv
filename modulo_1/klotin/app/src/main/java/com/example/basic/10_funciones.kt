@@ -56,6 +56,7 @@ fun main(){
     println(cuadrado(numero=5))
     // función con retorno múltiple
     println(retornoMultiple(a=15, b=5))
+
     // funsión Lambda: son cortas de una sola línea. Recibe el parámetro y ejecuta/devuelve lo requerido
     val cuadradoLambda = {x: Int -> x*x}
     val saludoLamdba = {nombre: String-> "Good morning, $nombre"}
