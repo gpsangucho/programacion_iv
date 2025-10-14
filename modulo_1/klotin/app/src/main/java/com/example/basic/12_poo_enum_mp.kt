@@ -23,7 +23,7 @@ enum class Triaje(val color:String, val gravedad: String){
 }
 class Atencion(val tipo: Triaje, val mascota: String){
     fun activar() = "El triaje de color ${tipo.color} del \" ${mascota}\" se activa"
-    fun info()= "${tipo.descripcion()} - tipo poder ${tipo.gravedad}"
+    fun info()= "${tipo.descripcion()} - tipo gravedad ${tipo.gravedad}"
 }
 
 fun main(){
