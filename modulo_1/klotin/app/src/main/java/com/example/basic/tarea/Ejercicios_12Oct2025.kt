@@ -1,11 +1,8 @@
-package com.example.basic
-
+package com.example.basic.tarea
+/*
 import java.lang.StringBuilder
-import java.time.LocalDate
-import java.time.LocalTime
 import kotlin.io.readLine
 import kotlin.random.Random
-import kotlin.random.nextInt
 import kotlin.text.toIntOrNull
 
 fun ejercicio1(){
@@ -404,3 +401,4 @@ fun main(){
     //ejercicio9()
     ejercicio10()
 }
+*/
