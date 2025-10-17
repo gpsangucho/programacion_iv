@@ -12,7 +12,14 @@ fun main(){
         "Yoda" to 100
     )
 
+    val mapa2 = mapOf(
+        2 to 7,
+        4 to 5,
+        6 to 9
+    )
+
     println("Fuerza de los Jedis:  ${fuerzaJedis}")
+    println("mapa: ${mapa2}")
     // estruturas pueden ser mutables o inmutables
     // MAP es inmutable: no se puede modificar (es como una constante)
 

@@ -77,6 +77,7 @@ fun main(){
     val numeroConvertido: String = numeroDouble.toString()
     println(numeroConvertido)
     println("Double: ${numeroDouble} a string: ${numeroConvertido}")
+    val n: Double = numeroConvertido.toDouble()
 
 
 

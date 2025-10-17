@@ -106,6 +106,7 @@ que depositas (empieza en 5). Imprime semana a semana hasta alcanzar meta.
         semana +=1
     }
 }
+
 fun ejercicio_4() {
     /* Simulador de ahorro semanal
 Entrada: meta y ahorro inicial. Cada semana sumas +10 a la cantidad semanal
