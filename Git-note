@@ -1,0 +1,11 @@
+* Si la rama no existe localmente, pero sí en el remoto (GitHub, GitLab, etc.):
+1.- git fetch origin   (Descargar todas las ramas remotas)
+2.- git checkout -b nombre_de_rama origin/nombre_de_rama (créala localmente y cámbiate a ella:)
+
+
+1.- git checkout nombre_rama_destino (cambiarse de rama)
+2.- git Branch 	   (Verifico en que rama estoy) 
+3.- git fetch origin (descarga todas las ramas remotas + solo los cambios del remoto y los guarda en mis referencias pero no toca tu código ni tu rama actual.)
+4.- git merge origin/nombre_de_rama (Fusiona esos cambios remotos con tu rama local actual.)
+Pasos 3 y 4 puede ser reemplaza por paso 5
+5.- git pull origin nombre_de_rama (Descarga los cambios del remoto y lo funciona automáticamente con tu rama local)
