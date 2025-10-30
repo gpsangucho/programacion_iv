@@ -15,8 +15,9 @@ export default function App() {
       <SaludoProps nombre="Francisco" />
       <Contador/>
       <Caja/>
+      <Perfil/>
     </View>
-    <Perfil/>
+    
   );
 }
 
