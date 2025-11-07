@@ -1,0 +1,11 @@
+flutter upgrade
+
+flutter pub get
+flutter clean
+flutter pub get
+flutter pub outdated (compatibilidad de paquetes)
+
+flutter clean
+flutter pub get
+flutter run
+
