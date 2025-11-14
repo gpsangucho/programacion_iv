@@ -10,12 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Hellojetpackcompose">
+        android:theme="@style/Theme.Proy_compose">
         <activity
-            android:name=".MainBoton"
+            android:name=".Mainjob"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Hellojetpackcompose">
+            android:theme="@style/Theme.Proy_compose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
