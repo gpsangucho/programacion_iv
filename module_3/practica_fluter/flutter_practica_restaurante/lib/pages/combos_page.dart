@@ -69,7 +69,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
             const SizedBox(height: 16),
 
-//***************************COMBO BOX 1********************** */
+//***************************COMBO BOX 1 ********************** */
             DropdownButton<String>(
               value: tipo_plato, //Aqui selecciono el tipo de cliente
               isExpanded: true,
