@@ -41,7 +41,5 @@ fun main(){
         "julio","agosto","Septiembre" -> println("Aire")
         "oct","nov","dic" -> println("Agua")
     }
-
-
 }
 

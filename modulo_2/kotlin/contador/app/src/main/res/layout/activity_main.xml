@@ -54,6 +54,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reiniciar"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="48dp"
+        />
 
+    <Button
+        android:id="@+id/btnProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiplicar"
+        android:layout_marginTop="48dp"
+        />
 </LinearLayout>

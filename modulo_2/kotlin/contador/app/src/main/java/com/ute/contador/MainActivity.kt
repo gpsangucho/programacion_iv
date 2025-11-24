@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val btnSumar = findViewById<Button>(R.id.btnSumar)
         val btnRestar = findViewById<Button>(R.id.btnRestar)
         val btnReset = findViewById<Button>(R.id.btnReset)
+        val btnProducto = findViewById<Button>(R.id.btnProducto)
 
 
         fun actualizarTexto() {
@@ -38,6 +39,12 @@ class MainActivity : AppCompatActivity() {
         btnReset.setOnClickListener {
             contador = 0
             actualizarTexto()
+        }
+
+        btnProducto.setOnClickListener {
+           contador = contador*contador
+            actualizarTexto()
+
         }
 
 
