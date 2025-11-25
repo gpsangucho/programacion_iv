@@ -1,0 +1,27 @@
+https://francisco-higuera.netlify.app/
+
+Comandos GIT: 
+
+ 
+
+Actualizo la rama 
+
+git branch (verificar la rama de interes) 
+
+ git checkout rama_de_ de_ interes (cambiarme de rama local) 
+
+ * git fetch origin (traer los cambios de la rama local desde el remote sin fucionar) 
+
+ * git pull origin rama_remota_rep (traer los cambios del remote y fusionar en el local)  
+
+ 
+
+Guardo cambios en una rama y repositorio remoto 
+
+git checkout -b rama_nueva (cuando requiero otra rama para guardar los cambios) 
+
+Git add . 
+
+Git commit –m “mensaje” 
+
+git push origin rama_local_a subir en el repo 

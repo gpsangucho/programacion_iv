@@ -1,0 +1,12 @@
+ORDEN para actualizar la rama
+git branch, 
+git checkout nombre-de-la-rama,
+git fetch //actualizar la rama local desde el remoto
+git pull origin nombre-de-la-rama, //Para actualizar tu rama local con la versión remota, usa
+git status
+
+Para guardar: 
+
+git add .
+git commit -m 'mansaje'
+git push origin <rama>
