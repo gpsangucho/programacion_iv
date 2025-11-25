@@ -20,17 +20,17 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import androidx.navigation.navArgument
 
-data class Usuario(val id: Int, val nombre: String,val rol: String = "")
+data class Usuario2(val id: Int, val nombre: String,val rol: String = "")
 
-class MainNavegation : ComponentActivity() {
+class MainNavegation_mp : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { NavBasicaApp() }
+        setContent { Nav_BasicaApp() }
     }
 }
 
 @Composable
-fun NavBasicaApp() {
+fun Nav_BasicaApp() {
     MaterialTheme {
         Surface(Modifier.fillMaxSize()) {
             val nav = rememberNavController()
@@ -38,7 +38,7 @@ fun NavBasicaApp() {
 
                 // Pantalla lista
                 composable("home") {
-                    HomeScreen(
+                    Home_Screen(
                         onOpenDetail = { id, nombre ->
                             // Codificar nombre por seguridad (espacios, tildes, etc.)
                             val safe = URLEncoder.encode(nombre, StandardCharsets.UTF_8.toString())
@@ -57,7 +57,7 @@ fun NavBasicaApp() {
                 ) { backStack ->
                     val id = backStack.arguments?.getInt("id") ?: -1
                     val nombre = backStack.arguments?.getString("nombre") ?: ""
-                    DetailScreen(
+                    Detail_Screen(
                         id = id,
                         nombre = nombre,
                         onBack = { nav.popBackStack() }
@@ -69,13 +69,13 @@ fun NavBasicaApp() {
 }
 
 @Composable
-fun HomeScreen(onOpenDetail: (Int, String) -> Unit) {
+fun Home_Screen(onOpenDetail: (Int, String) -> Unit) {
     val usuarios = remember {
         listOf(
-            Usuario(1, "Ana Torres"),
-            Usuario(2, "Luis Pérez"),
-            Usuario(3, "María López"),
-            Usuario(4, "Carlos Ruiz")
+            Usuario2(1, "Dinky"),
+            Usuario2(2, "Lucas"),
+            Usuario2(3, "Puma"),
+            Usuario2(4, "Fiu")
         )
     }
 
@@ -85,7 +85,7 @@ fun HomeScreen(onOpenDetail: (Int, String) -> Unit) {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Home: selecciona un usuario", style = MaterialTheme.typography.titleLarge)
+        Text("Home: selecciona una mascota", style = MaterialTheme.typography.titleLarge)
 
         LazyColumn(
             modifier = Modifier
@@ -112,7 +112,7 @@ fun HomeScreen(onOpenDetail: (Int, String) -> Unit) {
 }
 
 @Composable
-fun DetailScreen(id: Int, nombre: String, onBack: () -> Unit) {
+fun Detail_Screen(id: Int, nombre: String, onBack: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -133,8 +133,8 @@ fun DetailScreen(id: Int, nombre: String, onBack: () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-private fun PreviewHome() { MaterialTheme { HomeScreen { _, _ -> } } }
+private fun PreviewHome() { MaterialTheme { Home_Screen { _, _ -> } } }
 
 @Preview(showBackground = true)
 @Composable
-private fun PreviewDetail() { MaterialTheme { DetailScreen(9, "Ejemplo", onBack = {}) } }
+private fun PreviewDetail() { MaterialTheme { Detail_Screen(9, "Ejemplo", onBack = {}) } }

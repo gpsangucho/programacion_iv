@@ -14,12 +14,12 @@ void main() {
     'isDomestic':true
   };
   
-  print(pokemon);
+  print(mascota);
   
   // Acceder al valor de un elemento
   print("\n Valores del MAP mascota");
-  print(pokemon['name']);
-  print(pokemon['imagenes']);
-  print(pokemon['isDOmestic']);
+  print(mascota['name']);
+  print(mascota['imagenes']);
+  print(mascota['isDOmestic']);
   
 }

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hellojetpackcompose">
         <activity
-            android:name=".MainBoton"
+            android:name=".MainNavegation_mp"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Hellojetpackcompose">

@@ -29,7 +29,7 @@ class _SplitBillPageState extends State<SplitBillPage> {
     setState(() {
       resultText =
         'Total: \$${total.toStringAsFixed(2)}\n'
-        'Personas: $people\n'
+        'Meses financiados: $people\n'
         'Mensualidad a pagar: \$${perPerson.toStringAsFixed(2)}';
     });
   }

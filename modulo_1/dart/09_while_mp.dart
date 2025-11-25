@@ -1,29 +1,19 @@
 void main() {
-  int n = 10;
-  int tabla = 3;
-  int i = 0;
-  while (i<=n){
-    //i++;
-    print("$i * $tabla = ${i*tabla}");
-    i++;
+  List<String> pendientes = [
+    "Vacunación de Firulais",
+    "Control Gato Mishi",
+    "Desparasitación Conejo"
+  ];
+
+  while (pendientes.isNotEmpty) {
+    print("Atendiendo: ${pendientes.first}");
+    pendientes.removeAt(0); // se atiende y se elimina
   }
-  print("\n");
-  i=0;
-   while (i<n){
-    //i++;
-    print("$i * $tabla = ${i*tabla}");
-    i++;
-  }
-  print("\n");
-  i=0;
-  while (i<n){
-    i++;
-    print("$i * $tabla = ${i*tabla}");
-  }
-  print("\n");
-  i=1;
-  do{
-    print("$i * $tabla = ${i*tabla}");
-    i++;
-  }while(1<n);
+  
+  int dosis = 0;
+
+  do {
+    print("Administrando dosis #${dosis + 1}");
+    dosis++;
+  } while (dosis < 3);
 }

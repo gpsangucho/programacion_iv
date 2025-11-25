@@ -58,4 +58,13 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     implementation("androidx.navigation:navigation-compose:2.7.3")
+    implementation("androidx.navigation:navigation-compose:2.7.0")
+    implementation("androidx.navigation:navigation-compose:2.9.6") // o la versión estable más reciente
+    implementation("androidx.navigation:navigation-compose:2.7.0")
+// usa versión estable actual
+    implementation("androidx.compose.material3:material3:1.2.0")
+// o la versión que uses
+    implementation("androidx.navigation:navigation-compose:2.7.0")
+    implementation("androidx.compose.material3:material3:1.2.0")
+
 }

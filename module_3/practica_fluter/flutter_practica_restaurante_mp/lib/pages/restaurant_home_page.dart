@@ -27,13 +27,13 @@ class RestaurantHomePage extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () => context.go('/tip'),
-              child: const Text('Calcular propina'),
+              child: const Text('Calificación del servicio'),
             ),
             const SizedBox(height: 12),
 
             ElevatedButton(
               onPressed: () => context.go('/split'),
-              child: const Text('Dividir cuenta a plazos'),
+              child: const Text('Financiamiento a plazos'),
             ),
 
             const SizedBox(height: 12),

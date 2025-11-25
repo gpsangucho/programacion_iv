@@ -1,21 +1,38 @@
+// Lista para simular consultas
+List<String> consultas = [];
+
+// Función para registrar una consulta (sin pedir datos)
+void registrarConsulta(String mascota, String motivo) {
+  consultas.add("$mascota - $motivo");
+  print("Consulta registrada: $mascota ($motivo)");
+}
+
+// Función para listar todas las consultas
+void listarConsultas() {
+  print("\n=== CONSULTAS REGISTRADAS ===");
+
+  if (consultas.isEmpty) {
+    print("No hay consultas.\n");
+    return;
+  }
+
+  for (int i = 0; i < consultas.length; i++) {
+    print("${i + 1}. ${consultas[i]}");
+  }
+
+  print("");
+}
+
 void main() {
-  print(greetEveryone());
-  print(suma(3,4));
-  print(addTwoNumberOptional(6,8));
-  print(addTwoNumberOptional(8));
-  print(greetPerson(name:"Ger", message:"Hasta la vista"));
-  print(greetPerson(name:"Ger"));
-}
-// funciòn flecha
-String greetEveryone()=>'Hello everyone';
-int suma(int a, int b)=> a+b;
+  // Simulación sin dart:io: valores ya definidos
+  registrarConsulta("Firulais", "Dolor de estómago");
+  registrarConsulta("Michi", "Vacunación");
+  registrarConsulta("Conejo Peludo", "Revisión general");
 
-//con parámetro opcional
-int addTwoNumberOptional(int a, [int b = 0]){
-  return a+b;
-}
+  listarConsultas();
 
-//con mensaje opcional con valor por defecto
-String greetPerson({required String name, String message = "Hola"}){
-  return '$message $name';
+  // Si quieres, puedes llamar más funciones
+  registrarConsulta("Toby", "Chequeo dental");
+
+  listarConsultas();
 }

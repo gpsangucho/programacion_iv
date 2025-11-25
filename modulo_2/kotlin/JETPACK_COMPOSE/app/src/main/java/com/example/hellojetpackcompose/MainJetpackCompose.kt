@@ -1,4 +1,4 @@
-package com.ute.MainJetpackCompose
+package com.example.MainJetpackCompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

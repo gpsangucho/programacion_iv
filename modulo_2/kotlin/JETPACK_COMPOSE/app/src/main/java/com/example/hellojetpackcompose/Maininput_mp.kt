@@ -8,30 +8,28 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-class MainBoton : ComponentActivity() {
+class Maininput_mp : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { AppEstadoBasico() }
+        setContent { AppCampTexto() }
     }
 }
 
 @Composable
-fun AppEstadoBasico() {
+fun AppCampTexto() {
     MaterialTheme {
         Surface(Modifier.fillMaxSize()) {
-            EstadoBasicoScreen()
+            CampTextoScreen()
         }
     }
 }
 
 @Composable
-fun EstadoBasicoScreen() {
-    var activo by remember { mutableStateOf(false) }
+fun CampTextoScreen() {
+    var nombre by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
@@ -40,18 +38,32 @@ fun EstadoBasicoScreen() {
         verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(if (activo) "Modo ACTIVO ✅" else "Modo INACTIVO ⛔")
+        Text(
+            text = "Consultas veterinarias",
+            style = MaterialTheme.typography.titleLarge,
+            modifier = Modifier.padding(16.dp)
+        )
+        Text("Nombre: ")
+        OutlinedTextField(
+            value = nombre,
+            onValueChange = { nombre = it },
+            label = { Text("Escribe el nombre de tu mascota") },
+            singleLine = true
+        )
 
-        Button(onClick = { activo = !activo }) {
-            Text(if (activo) "Desactivar" else "Activar",
-                color = Color(0xff880e4f),
-                fontFamily = FontFamily.Cursive
+        Text(
+            text = if (nombre.isBlank()) "Aún no has escrito nada..." else "Hola, $nombre 👋",
+            style = MaterialTheme.typography.titleMedium
+        )
 
-            )
+        Button(onClick = { nombre = "" }) {
+            Text("Limpiar")
         }
+
+
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun EstadoPreview() { AppEstadoBasico() }
+private fun CampoTextoPreview() { AppCampoTexto() }

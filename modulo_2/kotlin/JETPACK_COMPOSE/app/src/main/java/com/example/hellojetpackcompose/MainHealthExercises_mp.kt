@@ -1,4 +1,4 @@
-package com.ute.hellojetpackcompose
+package com.example.hellojetpackcompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -18,22 +18,23 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import kotlin.text.format
 
-sealed class HealthScreen(val route: String) {
-    object Home : HealthScreen("health_home")
-    object Bmi : HealthScreen("bmi")
-    object Converter : HealthScreen("converter")
+sealed class HealtScreen(val route: String) {
+    object Home : HealtScreen("health_home")
+    object Bmi : HealtScreen("bmi")
+    object Converter : HealtScreen("converter")
 }
 
-class MainHealthExercises : ComponentActivity() {
+class MainHealthExercises_mp : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { HealthNavApp() }
+        setContent { HealtNavApp() }
     }
 }
 
 @Composable
-fun HealthNavApp() {
+fun HealtNavApp() {
     val nav = rememberNavController()
     MaterialTheme {
         Surface(modifier = Modifier.fillMaxSize()) {
@@ -41,16 +42,16 @@ fun HealthNavApp() {
                 navController = nav,
                 startDestination = HealthScreen.Home.route
             ) {
-                composable(HealthScreen.Home.route) { HealthHomeScreen(nav) }
-                composable(HealthScreen.Bmi.route) { BmiScreen(nav) }
-                composable(HealthScreen.Converter.route) { ConverterScreen(nav) }
+                composable(HealthScreen.Home.route) { HealtHomeScreen(nav) }
+                composable(HealthScreen.Bmi.route) { BmScreen(nav) }
+                composable(HealthScreen.Converter.route) { ConverteScreen(nav) }
             }
         }
     }
 }
 
 @Composable
-fun HealthHomeScreen(nav: NavHostController) {
+fun HealtHomeScreen(nav: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,7 +60,7 @@ fun HealthHomeScreen(nav: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Health Exercises",
+            text = "Salud de mascotas",
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold
         )
@@ -68,25 +69,25 @@ fun HealthHomeScreen(nav: NavHostController) {
             onClick = { nav.navigate(HealthScreen.Bmi.route) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("BMI Calculator")
+            Text("Indice de Masa corporal")
         }
         Spacer(Modifier.height(12.dp))
         Button(
             onClick = { nav.navigate(HealthScreen.Converter.route) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Meters / Kilometers Converter")
+            Text("Convertir Metros / Kilometros")
         }
     }
 }
 
 @Composable
-fun BmiScreen(nav: NavController) {
+fun BmScreen(nav: NavController) {
     var weight by remember { mutableStateOf("") }
     var height by remember { mutableStateOf("") }
 
-    val bmi = bmiValue(weight, height)
-    val bmiText = bmiCategory(bmi)
+    val bmi = bmValue(weight, height)
+    val bmiText = bmCategory(bmi)
 
     Column(
         modifier = Modifier
@@ -96,7 +97,7 @@ fun BmiScreen(nav: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "BMI Calculator",
+            text = "Indice de masa corporal de mascotas",
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold
         )
@@ -110,13 +111,13 @@ fun BmiScreen(nav: NavController) {
         OutlinedTextField(
             value = weight,
             onValueChange = { weight = it },
-            label = { Text("Weight (kg)") },
+            label = { Text("Peso (kg)") },
             modifier = Modifier.fillMaxWidth()
         )
         OutlinedTextField(
             value = height,
             onValueChange = { height = it },
-            label = { Text("Height (m)") },
+            label = { Text("Altura (m)") },
             modifier = Modifier.fillMaxWidth()
         )
 
@@ -127,18 +128,18 @@ fun BmiScreen(nav: NavController) {
             onClick = { nav.navigateUp() },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Back")
+            Text("<-- Inicio")
         }
     }
 }
 
 @Composable
-fun ConverterScreen(nav: NavController) {
+fun ConverteScreen(nav: NavController) {
     var meters by remember { mutableStateOf("") }
     var kilometers by remember { mutableStateOf("") }
 
-    val metersToKm = metersToKilometers(meters)
-    val kmToMeters = kilometersToMeters(kilometers)
+    val metersToKm = meterToKilometers(meters)
+    val kmToMeters = kilometerToMeters(kilometers)
 
     Column(
         modifier = Modifier
@@ -157,13 +158,13 @@ fun ConverterScreen(nav: NavController) {
                 modifier = Modifier.padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Text("From meters to kilometers", fontWeight = FontWeight.SemiBold)
+                Text("De metros a kilometros", fontWeight = FontWeight.SemiBold)
                 OutlinedTextField(
                     value = meters,
                     onValueChange = { meters = it },
-                    label = { Text("Meters") }
+                    label = { Text("Metros") }
                 )
-                Text("Result: ${"%.3f".format(metersToKm)} km")
+                Text("Resultado: ${"%.3f".format(metersToKm)} km")
             }
         }
 
@@ -172,13 +173,13 @@ fun ConverterScreen(nav: NavController) {
                 modifier = Modifier.padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Text("From kilometers to meters", fontWeight = FontWeight.SemiBold)
+                Text("De kilometros a metros", fontWeight = FontWeight.SemiBold)
                 OutlinedTextField(
                     value = kilometers,
                     onValueChange = { kilometers = it },
-                    label = { Text("Kilometers") }
+                    label = { Text("Kilómetros") }
                 )
-                Text("Result: ${"%.3f".format(kmToMeters)} m")
+                Text("Resultado: ${"%.3f".format(kmToMeters)} m")
             }
         }
 
@@ -186,40 +187,40 @@ fun ConverterScreen(nav: NavController) {
             onClick = { nav.navigateUp() },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Back")
+            Text("<-- Inicio")
         }
     }
 }
 
-fun bmiValue(weight: String, height: String): Double {
+fun bmValue(weight: String, height: String): Double {
     val w = weight.replace(",", ".").toDoubleOrNull() ?: 0.0
     val h = height.replace(",", ".").toDoubleOrNull() ?: 0.0
     if (w <= 0.0 || h <= 0.0) return 0.0
     return w / (h * h)
 }
 
-fun bmiCategory(bmi: Double): String {
-    if (bmi == 0.0) return "Enter valid values"
+fun bmCategory(bmi: Double): String {
+    if (bmi == 0.0) return "Ingrese valores válidos"
     return when {
-        bmi < 18.5 -> "Underweight"
-        bmi < 25.0 -> "Normal weight"
-        bmi < 30.0 -> "Overweight"
-        else -> "Obesity"
+        bmi < 18.5 -> "Peso bajo"
+        bmi < 25.0 -> "Peso normal"
+        bmi < 30.0 -> "Sobrepeso"
+        else -> "Obesidad"
     }
 }
 
-fun metersToKilometers(meters: String): Double {
+fun meterToKilometers(meters: String): Double {
     val m = meters.replace(",", ".").toDoubleOrNull() ?: 0.0
     return m / 1000.0
 }
 
-fun kilometersToMeters(kilometers: String): Double {
+fun kilometerToMeters(kilometers: String): Double {
     val k = kilometers.replace(",", ".").toDoubleOrNull() ?: 0.0
     return k * 1000.0
 }
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewHealthNav() {
-    HealthNavApp()
+fun PreviewHealtNav() {
+    HealtNavApp()
 }

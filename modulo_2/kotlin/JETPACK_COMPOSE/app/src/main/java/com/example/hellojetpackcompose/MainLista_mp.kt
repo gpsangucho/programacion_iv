@@ -15,36 +15,36 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-data class Usuario1(val id: Int, val nombre: String, val rol: String)
+data class Users(val id: Int, val nombre: String, val rol: String)
 
-class MainLista : ComponentActivity() {
+class MainLista_mp : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { ListaUsuariosApp() }
+        setContent { ListUsuariosApp() }
     }
 }
 
 @Composable
-fun ListaUsuariosApp() {
+fun ListUsuariosApp() {
     MaterialTheme {
         Surface(Modifier.fillMaxSize()) {
-            ListaUsuariosScreen()
+            ListUsuariosScreen()
         }
     }
 }
 
 @Composable
-fun ListaUsuariosScreen() {
+fun ListUsuariosScreen() {
     val usuarios = remember {
         listOf(
-            Usuario1(1, "Ana Torres", "Diseñadora"),
-            Usuario1(2, "Luis Pérez", "Desarrollador"),
-            Usuario1(3, "María López", "Tester QA"),
-            Usuario1(4, "Carlos Ruiz", "Project Manager")
+            Users(1, "Tarzán", "Perro"),
+            Users(2, "Mimi", "Gato"),
+            Users(3, "Jon", "Loro"),
+            Users(4, "Piu", "pollo")
         )
     }
 
-    var seleccionado by remember { mutableStateOf<Usuario1?>(null) }
+    var seleccionado by remember { mutableStateOf<Users?>(null) }
 
     Column(
         modifier = Modifier
@@ -52,7 +52,7 @@ fun ListaUsuariosScreen() {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Lista de usuarios", style = MaterialTheme.typography.titleLarge)
+        Text("Lista de mascotas", style = MaterialTheme.typography.titleLarge)
 
         LazyColumn(
             modifier = Modifier
@@ -96,4 +96,4 @@ fun ListaUsuariosScreen() {
 
 @Preview(showBackground = true)
 @Composable
-private fun PreviewLista() { ListaUsuariosApp() }
+private fun PreviewLista() { ListUsuariosApp() }
