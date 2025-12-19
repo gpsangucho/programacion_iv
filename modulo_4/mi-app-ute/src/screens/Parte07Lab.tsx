@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
-import { WelcomeScreen } from "./WelcomeScreen";
-import { Badge } from "@/components/common/Badge";
-import { Card } from "@/components/common/Card";
-import { PrimaryButton } from "@/components/common/PrimaryButton";
-import { DemoScreen } from "./DemoScreen";
 
-export function Parte05Lab() {
+import { LoginFormDemo } from "./LoginFormDemo";
+
+export function Parte07Lab() {
   return (
     <View style={styles.stage}>
-      <DemoScreen />
+        <LoginFormDemo />
     </View>
+
   );
 }
 
