@@ -1,20 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ClockDemo } from "./ClockDemo";
-import { UseEffectAsyncDemo } from "./UseEffectAsyncDemo";
-import { AbortFetchDemo } from "./AbortFetchDemo";
+import { ProductsMemoDemo } from "./ProductsMemoDemoCopy";
+import { CallbackDemo } from "./CallbackDemo";
 
-export function Parte08Lab() {
+export function Parte09Lab() {
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>Parte 8 Lab — useEffect</Text>
+      <Text style={styles.h1}>Parte 9 Lab — useMemo / useCallback</Text>
 
       {/* Cambia aquí qué ejemplo estás probando */}
       <View style={styles.stage}>
-        {/*
-        <ClockDemo />
-        <UseEffectAsyncDemo/>
+      {/* 
+        <ProductsMemoDemo />
+        <CallbackDemo/>
+        <CallbackDemo2/>
         */}
-        <AbortFetchDemo/>
+
       </View>
     </View>
   );

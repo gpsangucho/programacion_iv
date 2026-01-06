@@ -1,20 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
-import { ClockDemo } from "./ClockDemo";
-import { UseEffectAsyncDemo } from "./UseEffectAsyncDemo";
-import { AbortFetchDemo } from "./AbortFetchDemo";
+import { RefCounter } from "./RefCounter";
+import { FocusDemo } from "./FocusDemo";
+import { TimerRefDemo } from "./TimerRefDemo";
 
-export function Parte08Lab() {
+export function Parte10Lab() {
   return (
     <View style={styles.container}>
-      <Text style={styles.h1}>Parte 8 Lab — useEffect</Text>
+      <Text style={styles.h1}>Parte 10 Lab — useRef / forwardRef</Text>
 
       {/* Cambia aquí qué ejemplo estás probando */}
       <View style={styles.stage}>
-        {/*
-        <ClockDemo />
-        <UseEffectAsyncDemo/>
-        */}
-        <AbortFetchDemo/>
+        {/*<RefCounter />
+        <FocusDemo/>*/}
+        <TimerRefDemo/>
       </View>
     </View>
   );
