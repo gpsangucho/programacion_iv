@@ -42,6 +42,29 @@ export function HomeScreen({ navigation }: Props) {
         <Text style={styles.btnText}>Ir a Login Form (Validación)</Text>
       </Pressable>
 
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("Products")}
+        >
+        <Text style={styles.btnText}>Ir a Productos (FlatList)</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("Profile", { userId: "u1", name: "Francisco",lastname: "Higuera" })}
+        >
+        <Text style={styles.btnText}>Ir a Profile (params)</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("Displayname")}
+        >
+        <Text style={styles.btnText}>Abrir Displayname (Storage)</Text>
+      </Pressable>
+
+
     </View>
   );
 }
