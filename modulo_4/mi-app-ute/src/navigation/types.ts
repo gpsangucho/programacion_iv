@@ -4,6 +4,7 @@ export type RootStackParamList = {
     Profile: { userId: string; name: string ; lastname:string};
     Settings: undefined;
     LoginForm: undefined;
+    RaizCuadrada: undefined;
     AreaForm: undefined;
     Products: undefined;
     Displayname:undefined;

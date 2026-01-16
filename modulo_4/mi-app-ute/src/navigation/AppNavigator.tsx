@@ -5,6 +5,7 @@ import { DetailsScreen } from "@/screens/DetailsScreen";
 
 import { Displayname } from "@/screens/Displayname";
 import { LoginFormScreen } from "@/screens/LoginFormScreen";
+import { RaizScreen } from "@/screens/RaizScreen";
 import { ProductsListScreen } from "@/screens/ProductsListScreen";
 import { ProfileScreen } from "@/screens/ProfileScreen";
 import { SettingsScreen } from "@/screens/SettingsScreen";
@@ -29,7 +30,7 @@ export function AppNavigator() {
       <Stack.Screen name="LoginForm" component={LoginFormScreen} options={{ title: "Login Form" }} />
 
       <Stack.Screen name="Products" component={ProductsListScreen} options={{ title: "Productos" }} />
-      
+      <Stack.Screen name="RaizCuadrada" component={RaizScreen} options={{ title: "Raiz Cuadrada" }} />
       <Stack.Screen
       name="Profile"
       component={ProfileScreen}
