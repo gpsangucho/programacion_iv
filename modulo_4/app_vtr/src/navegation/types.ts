@@ -7,6 +7,5 @@ export type RootStackParamList = {
     AreaForm: undefined;
     Products: undefined;
     Displayname:undefined;
-    Suma: { initialCount?: number }; // <-- nueva pantalla Suma
-    Sumador:undefined;
+    Demo:undefined;
   };

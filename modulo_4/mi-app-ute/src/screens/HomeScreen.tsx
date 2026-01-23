@@ -39,7 +39,7 @@ export function HomeScreen({ navigation }: Props) {
         style={[styles.btn, { marginTop: 10 }]}
         onPress={() => navigation.navigate("AreaForm")}
         >
-        <Text style={styles.btnText}>Ir a Login Form (Validación)</Text>
+        <Text style={styles.btnText}>Ir a Area FORM (Validación)</Text>
       </Pressable>
 
 
@@ -63,6 +63,21 @@ export function HomeScreen({ navigation }: Props) {
         >
         <Text style={styles.btnText}>Abrir Displayname (Storage)</Text>
       </Pressable>
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("Suma",{ initialCount: 5 })}
+        >
+        <Text style={styles.btnText}>Ir a sumar (FlatList)</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("Sumador")}
+        >
+        <Text style={styles.btnText}>Ir a sumadora (FlatList)</Text>
+      </Pressable>
+
 
 
     </View>

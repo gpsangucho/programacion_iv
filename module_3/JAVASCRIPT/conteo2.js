@@ -17,3 +17,21 @@ function agruparPorCategoria(productos){
 }
 
 console.log(agruparPorCategoria(productos));
+
+// otra opción con for: creo un objeto y recorro uno a uno el arreglo, recupero la categoria
+// y voy armando un objeto de clave:[] . categoria: array_de_productos
+function agruparPorCategoria(productos) {
+    let acc = {};
+
+    for (let prod of productos) {
+        const cat = prod.categoria;
+
+        if (!acc[cat]) {
+            acc[cat] = [];
+        }
+
+        acc[cat].push(prod.nombre);
+    }
+
+    return acc;
+}

@@ -3,7 +3,7 @@
 // Importa los tipos primero
 import React from 'react';
 import { LoadState, ProductDTO, successState } from '../types';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, View, Text } from 'react-native';
 import AppButton from '../components/AppButton';
 
 // Dentro del componente TypeScriptDemo, agrega:
