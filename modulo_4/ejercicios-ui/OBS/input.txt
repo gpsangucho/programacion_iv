@@ -1,0 +1,18 @@
+React controla el valor con useState.
+
+const [email, setEmail] = useState("");
+
+<input
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
+
+✅ Ventajas:
+
+Validaciones fáciles
+
+Estado siempre sincronizado
+
+Ideal para formularios complejos

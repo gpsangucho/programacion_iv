@@ -1,0 +1,32 @@
+🔸 Componente NO CONTROLADO
+
+El DOM maneja el valor (usando ref).
+
+import { useRef } from "react";
+
+function NoControlado() {
+  const inputRef = useRef();
+
+  const mostrarValor = () => {
+    alert(inputRef.current.value);
+  };
+
+  return (
+    <>
+      <input type="text" ref={inputRef} />
+      <button onClick={mostrarValor}>Ver valor</button>
+    </>
+  );
+}
+
+
+❌ Desventajas:
+
+Menos control
+
+Difícil validar
+
+Poco usado en React moderno
+
+👉 Conclusión:
+📌 En React real → usa controlados el 90% del tiempo

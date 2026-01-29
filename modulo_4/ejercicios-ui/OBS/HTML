@@ -1,0 +1,189 @@
+¡Perfecto! 😄
+Aquí tienes el listado completo (y actualizado) de las etiquetas HTML usadas para estructurar una página, especialmente las semánticas de HTML5, que son las recomendadas hoy.
+
+🧱 ESTRUCTURA BASE DEL DOCUMENTO
+
+Estas definen la estructura general del HTML:
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+
+Etiquetas:
+
+<!DOCTYPE>
+
+<html>
+
+<head>
+
+<body>
+
+🧭 ETIQUETAS SEMÁNTICAS PRINCIPALES (HTML5)
+
+Son clave para SEO, accesibilidad y buenas prácticas.
+
+Etiqueta	Uso
+<header>	Encabezado de página o sección
+<nav>	Navegación principal
+<main>	Contenido principal (solo una por página)
+<section>	Sección temática
+<article>	Contenido independiente
+<aside>	Contenido secundario / lateral
+<footer>	Pie de página o sección
+📄 CONTENEDORES Y AGRUPACIÓN
+
+Sirven para organizar contenido:
+
+Etiqueta	Uso
+<div>	Contenedor genérico
+<span>	Contenedor en línea
+<figure>	Contenido visual
+<figcaption>	Descripción de <figure>
+📝 TEXTO Y CONTENIDO
+
+Para estructurar textos:
+
+Títulos
+
+<h1> (solo uno recomendado)
+
+<h2>
+
+<h3>
+
+<h4>
+
+<h5>
+
+<h6>
+
+Texto
+
+<p> — párrafo
+
+<br> — salto de línea
+
+<hr> — separación temática
+
+<blockquote> — cita larga
+
+<pre> — texto preformateado
+
+📋 LISTAS
+<ul>
+  <li>Elemento</li>
+</ul>
+
+Etiqueta	Uso
+<ul>	Lista desordenada
+<ol>	Lista ordenada
+<li>	Elemento de lista
+<dl>	Lista de definición
+<dt>	Término
+<dd>	Descripción
+🧾 TABLAS
+<table>
+  <thead>
+  <tbody>
+  <tfoot>
+</table>
+
+Etiqueta
+<table>
+<thead>
+<tbody>
+<tfoot>
+<tr>
+<th>
+<td>
+<caption>
+<colgroup>
+<col>
+
+📦 FORMULARIOS (estructura)
+Etiqueta
+<form>
+<fieldset>
+<legend>
+<label>
+<input>
+<textarea>
+<select>
+<option>
+<button>
+
+🎯 MULTIMEDIA Y EMBEBIDOS
+Etiqueta
+<img>
+<video>
+<audio>
+<source>
+<iframe>
+<embed>
+<object>
+
+🧠 METADATOS Y SCRIPTS
+Etiqueta
+<title>
+<meta>
+<link>
+<style>
+<script>
+<noscript>
+
+
+🧩 ETIQUETAS SEMÁNTICAS MENOS COMUNES (PERO IMPORTANTES)
+Etiqueta	Uso
+<address>	Información de contacto
+<time>	    Fecha / hora
+<mark>	    Texto resaltado
+<details>	Contenido desplegable
+<summary>	Título de <details>
+<dialog>	Ventanas modales
+
+
+🏗️ EJEMPLO DE ESTRUCTURA COMPLETA
+<body>
+  <header>
+    <nav></nav>
+  </header>
+
+  <main>
+    <section>
+      <article>
+        <h1>Título</h1>
+        <p>Contenido</p>
+      </article>
+    </section>
+
+    <aside>
+      Contenido lateral
+    </aside>
+  </main>
+
+  <footer>
+    © 2026
+  </footer>
+</body>
+
+✅ REGLA DE ORO
+
+👉 Usa etiquetas semánticas antes que <div>
+👉 Mejor accesibilidad + SEO + mantenimiento
+
+Si quieres, puedo:
+
+🎨 Convertir esto en una plantilla base
+
+🧠 Explicarte cuándo usar section vs article
+
+🚀 Mostrar cómo se conecta con React / JSX
+
+Dime 😉
+
+

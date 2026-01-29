@@ -25,9 +25,5 @@ export default function ServiceNote(){
         </Text>
 
         </View>
-
-
     )
-
-
 }

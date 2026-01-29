@@ -1,0 +1,9 @@
+🧠 Resumen rápido
+Elemento	React
+Form	<form>
+Input	<input>
+Select	<select>
+ComboBox	<input + datalist>
+Checkbox	<input type="checkbox">
+Radio	<input type="radio">
+Lista	.map()
