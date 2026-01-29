@@ -37,6 +37,13 @@ export function HomeScreen({ navigation }: Props) {
 
       <Pressable
         style={[styles.btn, { marginTop: 10 }]}
+        onPress={() => navigation.navigate("RaizCuadrada")}
+        >
+        <Text style={styles.btnText}>Ir a Login Form (Validación)</Text>
+      </Pressable>
+
+      <Pressable
+        style={[styles.btn, { marginTop: 10 }]}
         onPress={() => navigation.navigate("AreaForm")}
         >
         <Text style={styles.btnText}>Ir a Area FORM (Validación)</Text>
